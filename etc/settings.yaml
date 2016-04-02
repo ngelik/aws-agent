@@ -1,0 +1,61 @@
+---
+
+r2_api_url: "https://example.com/api"
+r2_headers: {'Content-Type': 'application/json'}
+r2_user: "user"
+r2_passw: "passw"
+r2_ckeckers_path: "checkers"
+
+meta_info_url: http://169.254.169.254/latest/meta-data/instance-id
+
+
+checkers:
+  - {
+      name: "info_agent"
+    }
+  - {
+      name: "info_host"
+    }
+  - {
+      name: "info_volumes"
+    }
+  - {
+      name: "info_mybatis",
+
+      mybatis_path: "/opt/mybatis/bin",
+      java_path: "/opt/java"
+    }
+  - {
+      name: "info_jndi",
+
+      tomcat_context_path: "/opt/tomcat/conf/context.xml1",
+
+      context_find_path: "/opt/tomcat/conf",
+      context_files: [
+          "mturk-web.xml",
+          "context.xml",
+          "virtualizer-web.xml"
+        ]
+    }
+  - {
+      name: "info_cgi_proxy",
+
+      cgiproxy_path: "/var/www/cgi-bin/nph-proxy.cgi"
+    }
+  - {
+      name: "info_nginx",
+    }
+  - {
+      name: "info_zabbix",
+    }
+  - {
+      name: "info_java",
+
+      tomcat_setenv_path: "/opt/tomcat/bin/setenv.sh",
+      java_path: "/opt/java"
+    }
+  - {
+      name: "info_login",
+
+      login_time_format: "%Y-%m-%d"
+    }
